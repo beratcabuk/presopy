@@ -1,0 +1,24 @@
+# docker-compose.yml
+services:
+  redis:
+    image: redis/redis-stack-server:latest
+    volumes:
+      - redis_data:/data
+    command: redis-stack-server --save 60 1 --loglevel warning
+    restart: unless-stopped
+
+  api:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+      - SERVICE_API_KEYS=["YOUR_API_KEY"]  # Change this
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+volumes:
+  redis_data:
