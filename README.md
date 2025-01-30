@@ -1,4 +1,14 @@
-# Preso-Py
+Do your users send ONE BILLION requests to your AI agent asking for the same thing? Introducing:
+```
++-----------------------------------------+
+|    ____                       ______  __|
+|   / __ \________  _________  / __ \ \/ /|
+|  / /_/ / ___/ _ \/ ___/ __ \/ /_/ /\  / |
+| / ____/ /  /  __(__  ) /_/ / ____/ / /  |
+|/_/   /_/   \___/____/\____/_/     /_/   |
++-----------------------------------------+
+```
+# PresoPy
 
 A minimalistic prompt caching service using FastAPI and Redis Stack. Designed for speed and efficiency, Preso-Py caches responses to reduce redundant computations and enhance performance.
 
